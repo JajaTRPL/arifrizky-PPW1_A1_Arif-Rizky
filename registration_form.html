@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk frame dan background image pada Ownership Cat */
+        .ownership-frame {
+            border: 2px solid black; /* Garis pinggir frame */
+            padding: 20px; /* Jarak antara teks dan pinggir frame */
+            background-image: url('kucing.jpeg'); /* Background image */
+            background-size: cover; /* Mengisi area dengan gambar */
+            background-position: center; /* Posisi gambar di tengah */
+            text-align: center; /* Tengahkan teks di dalam frame */
+            width: 50%;
+            margin: 0 auto; /* Membuat frame menjadi tengah */
+            margin-top: 75px;
+            border-radius: 20px;
+        }
+
+        /* CSS untuk teks di dalam frame */
+        .ownership-text {
+            display: inline-block; /* Agar latar belakang hanya mengikuti teks */
+            padding: 10px 20px; /* Jarak antara teks dan latar belakang */
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px; /* Mengatur sudut teks */
+            font-family: "Arial Black", sans-serif; /* Mengubah jenis font */
+            color: #333; /* Mengubah warna teks */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan teks */
+            font-size: 24px; /* Ukuran font */
+        }
+
+        /* CSS untuk konten formulir */
+        form {
+            width: 50%; /* Lebar formulir */
+            margin: 0 auto; /* Menengahkan formulir horizontal */
+            border: 2px solid black; /* Kotak di sekitar formulir */
+            padding: 20px; /* Jarak antara isi formulir dengan tepi kotak */
+            background-color: #FFF7F1; /* Warna krem dengan transparansi */
+            border-radius: 10px;
+        }
+
+        label {
+            display: inline-block;
+            text-align: left;
+            width: 150px; /* Lebar label untuk keseragaman */
+            padding-right: 20px; /* Jarak antara label dan input */
+        }
+
+        .cat-inputs {
+            display: inline-block;
+            vertical-align: top; /* Mengatur tata letak elemen input */
+        }
+
+        .cat-food {
+            display: inline-block;
+            vertical-align: top; /* Mengatur tata letak elemen input */
+        }
+
+        body{
+            background-color: #f0f0f0; /* Warna latar belakang body */
+            font-family: Arial, sans-serif; /* Mengatur jenis font */
+            margin: 0; /* Hilangkan margin default pada body */
+            padding: 0; /* Hilangkan padding default pada body */
+        }
+
+        /* Reset margin pada elemen h1 */
+        h1 {
+            margin: 0;
+            padding: 20px 0; /* Jarak antara h1 dengan elemen lain */
+            background-color: #333; /* Warna latar belakang h1 */
+            color: white; /* Warna teks h1 */
+            border-bottom: 2px solid black; /* Garis bawah h1 */
+            border-radius: 10px 10px 0 0; /* Mengatur sudut h1 */
+        }
+
+        /* Gaya untuk tombol Submit */
+        input[type="submit"] {
+            padding: 10px 20px; /* Jarak antara teks dan pinggir tombol */
+            background-color: #333; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Hilangkan border */
+            border-radius: 5px; /* Mengatur sudut tombol */
+            cursor: pointer; /* Ganti kursor saat diarahkan ke tombol */
+        }
+
+        /* Gaya untuk tombol Submit saat dihover */
+        input[type="submit"]:hover {
+            background-color: #555; /* Warna latar belakang tombol saat dihover */
+        }
+    </style>
+    <script>
+        function showHappyMessage() {
+            alert("Your cat seems happy");
+        }
+    </script>
+</head>
+<body>
+    <h1>Ownership Cat</h1>
+    <div class="ownership-frame">
+        <div class="ownership-text">Your unique cat</div>
+    </div>
+    <form>
+        <label for="fname">Full name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Firstname and Lastname"><br><br>
+        <label for="cat">Your Cat type:</label>
+        <div class="cat-inputs">
+            <input type="radio" id="Sphinx" name="fav_cat" value="Sphinx">
+            <label for="Sphinx">Sphinx</label><br>
+            <input type="radio" id="Angora" name="fav_cat" value="Angora">
+            <label for="Angora">Angora</label><br>
+            <input type="radio" id="Maine Coon" name="fav_cat" value="Maine Coon">
+            <label for="Maine Coon">Maine Coon</label><br>
+            <input type="radio" id="Persian" name="fav_cat" value="Persian">
+            <label for="Persian">Persian</label><br>
+            <input type="radio" id="Other" name="fav_cat" value="Other">
+            <label for="Other">Other</label><br>
+            <input type="text" id="otherCat" name="otherCat" placeholder="Other (Please specify)">
+        </div><br><br>
+        <label for="interest">Favorite Food:</label>
+        <div class="cat-food">
+            <input type="checkbox" id="whiskas" name="favorite food" value="whiskas">
+            <label for="whiskas">Whiskas</label><br>
+            <input type="checkbox" id="royalcanin" name="favorite food" value="royalcanin">
+            <label for="royalcanin">Royal Canin</label><br>
+            <input type="checkbox" id="felibite" name="favorite food" value="felibite">
+            <label for="felibite">Felibite</label>
+        </div><br><br>
+        <label for="image">Photo of your cat:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+        <label>Reaction of your cat:</label>
+        <button onclick="showHappyMessage()">Show Happiness</button><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

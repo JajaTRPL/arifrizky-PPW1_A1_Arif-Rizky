@@ -1,0 +1,29 @@
+form {
+    border: 2px solid black; /* Ketebalan garis dan warna kotak */
+    padding: 20px; /* Jarak antara isi formulir dengan tepi kotak */
+}
+form {
+    width: 50%; /* Lebar formulir */
+    margin: 0 auto; /* Menengahkan formulir horizontal */
+    border: 2px solid black; /* Kotak di sekitar formulir */
+    padding: 20px; /* Jarak antara isi formulir dengan tepi kotak */
+    background-color: #fff8dc; /* Warna latar belakang formulir */
+}
+h1 {
+    text-align: center; /* Menengahkan tulisan horizontal */
+}
+input[type="submit"] {
+    display: block; /* Membuat tombol submit menjadi blok agar dapat diatur tata letaknya */
+    margin: 0 auto; /* Menengahkan tombol submit secara horizontal */
+}
+hr {
+    margin: 20px 0; /* Jarak di atas dan di bawah garis */
+    border: none; /* Tidak ada border */
+    border-top: 1px solid black; /* Garis horizontal dengan ketebalan 1px dan warna hitam */
+}
+input[type="text"], input[type="file"], input[type="radio"], input[type="checkbox"], button {
+    border-radius: 20px; /* Membuat sudut oval */
+    padding: 5px 10px; /* Jarak antara teks dan pinggir frame */
+    border: 2px solid #333; /* Garis pinggir frame */
+    margin-bottom: 5px; /* Jarak antara inputan */
+}
