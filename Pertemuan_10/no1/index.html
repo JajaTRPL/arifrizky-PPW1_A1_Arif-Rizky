@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+    <!-- Embed JavaScript -->
+    <script>
+        function showEmbedMessage() {
+            alert("Hello from embedded JavaScript!");
+        }
+    </script>
+    <!-- External JavaScript -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>JavaScript Demo</h1>
+    <button onclick="showEmbedMessage()">Click for Embed Message</button>
+    <button onclick="showInlineMessage()">Click for Inline Message</button>
+    <button onclick="showExternalMessage()">Click for External Message</button>
+
+    <!-- Inline JavaScript -->
+    <script>
+        function showInlineMessage() {
+            alert("Hello from inline JavaScript!");
+        }
+    </script>
+</body>
+</html>

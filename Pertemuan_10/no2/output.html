@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Methods</title>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    <button onclick="showConsoleLog()">Console Log</button>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showDocumentWrite()">Document Write</button>
+    <button onclick="showInnerHTML()">Inner HTML</button>
+
+    <div id="output"></div>
+
+    <script>
+        function showConsoleLog() {
+            console.log("This is a message from console.log(). It demonstrates how to log messages in the console for debugging purposes. You can see this message in the browser's developer tools console.");
+        }
+
+        function showAlert() {
+            alert("This is a message from alert(). It demonstrates how to show a pop-up alert message to the user. This is useful for displaying important notifications or warnings.");
+        }
+
+        function showDocumentWrite() {
+            document.write("This is a message from document.write(). It demonstrates how to write directly to the document. Note that using document.write() can overwrite the entire document content if used after the page has loaded, so it should be used with caution.");
+        }
+
+        function showInnerHTML() {
+            document.getElementById("output").innerHTML = "This is a message from innerHTML. It demonstrates how to dynamically change the content of an HTML element. This method is commonly used to update the content of a webpage without reloading the entire page.";
+        }
+    </script>
+</body>
+</html>
