@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikan PPW1 Check</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="output" class="mt-4"></div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isPraktikan = confirm("Apakah anda praktikan PPW1?");
+            var outputDiv = document.getElementById("output");
+
+            var outputHtml = isPraktikan ? (function() {
+                var nama = prompt("Masukkan Nama:");
+                var nim = prompt("Masukkan NIM:");
+                var angkatan = prompt("Masukkan Angkatan:");
+
+                return `
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Nama</th>
+                                <th scope="col">NIM</th>
+                                <th scope="col">Angkatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${nama}</td>
+                                <td>${nim}</td>
+                                <td>${angkatan}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `;
+            })() : "<p class='text-danger'>Anda bukan praktikan PPW1, anda tidak boleh masuk!</p>";
+
+            outputDiv.innerHTML = outputHtml;
+        });
+    </script>
+</body>
+</html>
